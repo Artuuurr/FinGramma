@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-export const WhyCard = () => {
+export const SuitsCards = () => {
 	const [data, setData] = useState(null)
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await fetch('http://localhost:3001/api/cards')
+				const response = await fetch('http://localhost:3001/api/suitsCards')
 				const responseData = await response.json()
-				setData(responseData.cards)
+				setData(responseData.suitsCards)
 			} catch (error) {
 				console.error('Error:', error)
 			}
@@ -20,17 +20,15 @@ export const WhyCard = () => {
 	return (
 		<div>
 			{data ? console.log({ data }) : <p>Loading...</p>}
-			<div className='grid grid-cols-3'>
+			<div>
 				{data && data.map((element) => (
-					<div className='p'>
-						<div>
+					<div className='flex'>
+						<div className=' w-24  mt-10 '>
 							<img src={element.imgRoute} alt={element.title} />
 						</div>
-						<div>
-							<h3>{element.title}</h3>
-						</div>
-						<div>
-							<p>{element.text}</p>
+						<div className='text-xl w-3/4 p-5 mt-6'>
+							<p className='inline font-bold'>{element.textBold}</p> 
+							<p className='inline'>{element.text}</p>
 						</div>
 					</div>
 				))}

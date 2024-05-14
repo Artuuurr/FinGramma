@@ -33,3 +33,7 @@ svg{
 .button-item{
   transition: all .3s ease-in;
 }
+
+.backGround{
+  background-color: #191D23;
+}
