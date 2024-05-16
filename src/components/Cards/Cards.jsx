@@ -9,8 +9,12 @@ export const Cards = ({ text }) => {
 				let url = ''
 				if (text === 'findCards') {
 					url = 'http://localhost:3001/api/findCards'
-				} else {
+				}
+				if (text === 'whyCards') {
 					url = 'http://localhost:3001/api/whyCards'
+				}
+				if (text === 'getCards') {
+					url = 'http://localhost:3001/api/getCards'
 				}
 				const response = await fetch(url)
 				const responseData = await response.json()
@@ -32,7 +36,15 @@ export const Cards = ({ text }) => {
 						<div className=' px-12 pt-14 pb-9'>
 							{text === 'findCards' ? (
 								<div>
-									<img className=' w-52 h-28 rounded-lg object-cover' src={element.imgRoute} alt={element.title} />
+									<img
+										className='w-52 h-28 rounded-lg object-cover'
+										src={element.imgRoute}
+										alt={element.title}
+									/>
+								</div>
+							) : text === 'getCards' ? (
+								<div className=' h-64'>
+									<img src={element.imgRoute} alt={element.title} />
 								</div>
 							) : (
 								<div>

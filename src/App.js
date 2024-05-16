@@ -47,29 +47,48 @@ function App() {
 			<div className='container mx-auto flex py-28'>
 				<div>
 					<TitleSection text='На этом курсе вы научитесь:' />
-					<Cards text='whyCards'/>
+					<Cards text='whyCards' />
 					<div className='flex justify-center '>
 						<AnchorForCourses text='Хочу научиться!' />
 					</div>
 				</div>
 			</div>
-			<div className='container mx-auto flex py-28'>
-				<div>
-					<div className='flex'>
-						<div className=' w-2/5'><TitleSection text='Курс вам подходит, если:' /></div>
-						<div className=' w-3/5'><SuitsCards /></div>
-					</div>
-					<div className='flex '>
-						<AnchorForCourses text='Мне подходит!' />
+
+			<div className='backGround w-full text-white'>
+				<div className='container mx-auto flex py-28 backGround'>
+					<div>
+						<div className='flex'>
+							<div className=' w-2/5'>
+								<TitleSection text='Курс вам подходит, если:' />
+							</div>
+							<div className=' w-3/5'>
+								<SuitsCards />
+							</div>
+						</div>
+						<div className='flex '>
+							<AnchorForCourses text='Мне подходит!' />
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className='container mx-auto flex py-28'>
 				<div>
 					<TitleSection text='Что я узнаю?' />
-					<Cards text='findCards'/>
+					<Cards text='findCards' />
 					<div className='flex justify-center '>
-						<AnchorForCourses text='Хочу научиться!' />
+						<AnchorForCourses text='Записаться' />
+					</div>
+				</div>
+			</div>
+			<div className='container mx-auto flex py-28'>
+				<div>
+					<div className='flex justify-center'>
+						<TitleSection text='Что я получу после окончания курса?' />
+					</div>
+					<p className='text-center mt-4 text-2xl text-mainColor'>Кроме новых применимых на практике знаний, умений и навыков вы получите много полезного.</p>
+					<Cards className='flex justify-center' text='getCards' />
+					<div className='flex justify-center'>
+						<AnchorForCourses text='Хочу на курс!' />
 					</div>
 				</div>
 			</div>
